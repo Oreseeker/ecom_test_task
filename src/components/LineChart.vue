@@ -36,16 +36,18 @@ export default {
           "2020-07-26",
           "2020-07-27",
           "2020-07-28",
-          "2020-07-29",
-
-        ],
+          "2020-07-29"
+        ].map(el => el.split("-")[2] + " июль"),
         datasets: [
           {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            pointBackgroundColor: "white",
-            borderWidth: 1,
-            pointBorderColor: "#249EBF",
+            label: "Число посещений",
+            backgroundColor: "#e6c8fa",
+            pointBackgroundColor: "#9500fc",
+            borderWidth: 4,
+            borderColor: "#bd63fb",
+            pointBorderColor: "#9500fc",
+            showLine: true,
+            lineTension: 0,
             // visits
             data: [
               213,
@@ -87,6 +89,29 @@ export default {
         legend: {
           display: false
         },
+        scales: {
+          xAxes: [
+            {
+              ticks: {
+                autoSkip: true,
+                maxTicksLimit: 4,
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)"
+              }
+            }
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)"
+              }
+            }
+          ]
+        },
+        tooltips: {
+          displayColors: false
+        }
       }
     };
   },

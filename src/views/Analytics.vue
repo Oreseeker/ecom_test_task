@@ -1,6 +1,7 @@
 <template>
   <div class="analytics">
     <h1>Аналитика</h1>
+    <h3>Аналитика по визитам</h3>
     <line-chart class="chart" :width="700"/>
   </div>
 </template>

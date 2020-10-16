@@ -14,7 +14,16 @@ const routes = [
   {
     path: "/analytics",
     name: "Аналитика",
-    component: Analytics
+    component: Analytics,
+    beforeEnter: (to, from, next) => {
+      if (!window.localStorage['leadhit-site-id']) {
+        alert("В начале укажите ID сайта! Перенаправляю на страницу авторизации.");
+        next({name: "Авторизация"});
+      }
+      else {
+        next();
+      }
+    }
   }
 ];
 
